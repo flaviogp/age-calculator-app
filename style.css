@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #ccc;
+    padding: 20px;
+}
+
+main{
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 25px;
+    border-bottom-right-radius: 100px;
+}
+
+
+main .inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+main .inputs label{
+    width: 100px;
+    text-transform: uppercase;
+    color: var(--smokey-grey);
+    /* margin-right: 30px; */
+    font-size: 1.3em;
+}
+main .inputs label:not(:last-child){
+    margin-right: 5%;
+}
+main .inputs input[type=number]{
+    width: 100%;
+    padding: 5px;
+    font-size: 3.2rem;
+    font-weight: 800;
+    border: 1px solid var(--smokey-grey);
+    border-radius: 5px;
+}
+
+
+main .results{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0 20px 0;
+    border-top: 1px solid var(--light-grey);
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 800;
+    position: relative;
+}
+main .results .image-container{
+    background-color: var(--purple);
+    padding: 15px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -30px;
+}
+main .results .image-container:hover{
+    cursor: pointer;
+    transition: all .5s;
+    background-color: hsl(259, 98%, 59%);
+}
+main .results .image-container img{
+    width: 30px;
+}
+
+main .results p span{
+    color: var(--purple)
+}
+
+
+
+
+
+/* remove input number arows */
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+@media screen and (min-width: 500px) {
+    main .inputs{
+        justify-content: start;
+    }
+    main .results .image-container{
+        right: 10%;
+    }
+    
+    main .results{
+        align-items: start;
+        padding: 20px 0;
+    }
+
+
+}
